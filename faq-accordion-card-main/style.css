@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans';
+    font-size: 12px;
+    transition: 0.2s ease-in-out;
+}
+
+body {
+    background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 34px;
+}
+.rate{
+    position: relative;
+    top:55%;
+    left:17%;
+    transform:translate(-20%, -50%);
+    z-index: 1;
+}
+.container {
+    position: absolute;
+    width:60%;
+    height: 60%;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    border-radius:20px;
+    display: flex;
+    overflow:hidden;
+}
+.woman{
+    position:relative;
+    top:50%;
+    transform: translate(-18%, -50%);
+}
+.left-side{
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 117% 70%;
+}
+
+.right-side{
+    margin: 30px auto;
+    width:35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.faq-text{
+    padding-bottom: 10px;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    margin:20px 0px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.arrow{ 
+    cursor: pointer;
+}
+
+.toggle-text{
+    display:none;
+    margin:20px 0px;
+}
+
+.active{
+    transform: rotate(180deg);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:375px) {
+    .container{
+        flex-direction: column;
+        overflow:visible;
+        width:70%;
+    }
+    .faq-text{
+        padding-bottom: 5px;
+        margin:5px 0px;
+    }
+    .toggle-text{
+        margin:5px 0px;
+    }
+    .left-side{
+        width:300px;
+        background-image: none;
+    }
+    .right-side{
+        margin-top:0px;
+        margin-left: 10px;
+        width:95%;
+    }
+    .woman{
+        position:relative;
+        transform: translateY(-113%);
+        width:50%;
+        margin-left: 18%;
+    }
+    .rate{
+        position: relative;
+        top:20%;
+        left:40%;
+        width:50px;
+        transform: translate(-70%, -50%)
+    }
+}
